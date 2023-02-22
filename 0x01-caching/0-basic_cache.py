@@ -1,42 +1,40 @@
 #!/usr/bin/env python3
+""" BaseCaching module
 """
-    Inherit from BaseCache and perform get and put op
-"""
-
-from base_caching import BasicCaching 
+from base_caching import BaseCaching
 
 
-class BasicCache(BasicCaching):
+class BasicCache(BaseCaching):
     """
-    Put and get methods to deal  with cache
-    Methods
-        put(item, key)
-        get(key)
+    Defines a class for caching information in key-value pairs
+    Methods:
+        put(key, item) - store a key-value pair
+        get(key) - retrieve the value associated with a key
     """
+
     def __init__(self):
         """
-        init the object and call parent class
-        Args
-            self
+        Initialize the class using the parent class __init__ method
         """
-        super().__init__()
+        BaseCaching.__init__(self)
 
     def put(self, key, item):
         """
-        insert items to parent class attribute
-        Args
-            key
-            item
+        Store a key-value pair
+        Args:
+            Key
+            Item
         """
-        if key and item:
+        if key is None or item is None:
+            pass
+        else:
             self.cache_data[key] = item
 
     def get(self, key):
         """
-        return item from dictionary
-        Args
-            key
+        Return value linked to key.
+        If key is None or doesn't exist, return None
         """
-        if key in self.cache_data.keys() and key:
+        if key is not None and key in self.cache_data.keys():
             return self.cache_data[key]
         return None
