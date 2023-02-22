@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """
     Inherit from BaseCache and perform get and put op
 """
@@ -11,8 +10,8 @@ class BasicCache(BasicCaching):
     """
     Put and get methods to deal  with cache
     Methods
-        put
-        get
+        put(item, key)
+        get(key)
     """
     def __init__(self):
         """
