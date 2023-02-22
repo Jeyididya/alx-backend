@@ -9,7 +9,7 @@ BasicCaching = __import__('0-basicCache').BaseCaching
 
 class BasicCache(BasicCaching):
     """
-    Put and get methods to deal with cache
+    Put and get methods to deal  with cache
     """
     def put(self, key, item):
         if key:
