@@ -3,7 +3,7 @@
     Inherit from BaseCache and perform get and put op
 """
 
-from base_caching import BaseCaching 
+from base_caching import BasicCaching 
 
 
 class BasicCache(BasicCaching):
