@@ -11,6 +11,8 @@ class BasicCache(BasicCaching):
     """
     Put and get methods to deal  with cache
     """
+    def __init__(self):
+        super().__init__()
     def put(self, key, item):
         if key:
             self.cache_data[key] = item
