@@ -12,13 +12,22 @@ class BasicCache(BasicCaching):
     Put and get methods to deal  with cache
     """
     def __init__(self):
+        """
+        init the object and call parent class
+        """
         super().__init__()
 
     def put(self, key, item):
-        if key:
+        """
+        insert items to parent class attribute
+        """
+        if key and item:
             self.cache_data[key] = item
 
     def get(self, key):
+        """
+        return item from dictionary
+        """
         if key in self.cache_data.keys() and key:
             return self.cache_data[key]
         return None
