@@ -13,6 +13,7 @@ class BasicCache(BasicCaching):
     """
     def __init__(self):
         super().__init__()
+
     def put(self, key, item):
         if key:
             self.cache_data[key] = item
