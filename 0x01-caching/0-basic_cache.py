@@ -3,7 +3,7 @@
     Inherit from BaseCache and perform get and put op
 """
 
-BasicCaching = __import__('0-basicCache').BaseCaching
+from base_caching import BaseCaching 
 
 
 class BasicCache(BasicCaching):
