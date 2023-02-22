@@ -6,6 +6,7 @@
 
 BasicCaching = __import__('0-basicCache').BaseCaching
 
+
 class BasicCache(BasicCaching):
     """
     Put and get methods to deal with cache
