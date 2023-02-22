@@ -11,7 +11,8 @@ class BasicCache(BasicCaching):
     Put and get methods to deal with cache
     """
     def put(self, key, item):
-        self.cache_data[key] = item
+        if key:
+            self.cache_data[key] = item
 
     def get(self, key):
         if key in self.cache_data.keys() and key:
